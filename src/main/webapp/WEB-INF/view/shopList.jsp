@@ -1,8 +1,4 @@
-
 <%@include file="template/head.jsp"%>
-
-
-
 <!-- Navigation -->
 <%@include file="template/nav.jsp"%>
 <!-- Page Content -->

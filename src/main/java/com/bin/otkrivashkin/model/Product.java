@@ -1,9 +1,8 @@
 package com.bin.otkrivashkin.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.persistence.*;
 
 /**
  * Created by Note1 on 14.07.2017.
@@ -22,6 +21,8 @@ public class Product {
     private String status;
     private int unitInStock;
     private String manufacturer;
+    @Transient
+    private MultipartFile image;
 
     public long getId() {
         return id;
@@ -93,5 +94,13 @@ public class Product {
 
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
+    }
+
+    public MultipartFile getImage() {
+        return image;
+    }
+
+    public void setImage(MultipartFile image) {
+        this.image = image;
     }
 }
