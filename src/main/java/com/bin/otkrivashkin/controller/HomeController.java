@@ -37,9 +37,13 @@ public class HomeController {
         return "shopList";
     }
 
-    @RequestMapping("/shopItem")
-    public String shopItem() {
-        return "shopItem";
+    @RequestMapping("/shopList/viewProduct/{id}")
+    public String viewProduct(@PathVariable long id, Model model) throws IOException {
+        Product product = productDao.getProductById(id);
+
+        model.addAttribute("product", product);
+
+        return "viewProduct";
     }
 
     @RequestMapping("/admin")
@@ -103,6 +107,16 @@ public class HomeController {
         productDao.deleteProduct(id);
 
         return "redirect:/admin/productInventory";
+    }
+
+    @RequestMapping("/admin/productInventory/editProduct/{id}")
+    public String editProduct(@PathVariable("id") long id, Model model) {
+        Product product = productDao.getProductById(id);
+
+        model.addAttribute(product);
+
+        return "editProduct";
+
     }
 
 }

@@ -35,7 +35,7 @@
                     <td>${product.price} USD</td>
                     <td>
                         <!-- view product -->
-                        <a href="<spring:url value="/productList/viewProduct/${product.id}" />">
+                        <a href="<spring:url value="/shopList/viewProduct/${product.id}" />">
                             <span class="glyphicon glyphicon-info-sign"></span>
                         </a>
                         <!-- delete product -->
