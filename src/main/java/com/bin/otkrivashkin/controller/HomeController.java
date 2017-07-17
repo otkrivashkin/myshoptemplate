@@ -127,7 +127,11 @@ public class HomeController {
     }
 
     @RequestMapping(value = "/admin/productInventory/editProduct", method = RequestMethod.POST)
-    public String editProduct(@ModelAttribute("product") Product product, Model model, HttpServletRequest request) {
+    public String editProduct(@Valid @ModelAttribute("product") Product product, BindingResult result, Model model, HttpServletRequest request) {
+
+        if (result.hasErrors()) {
+            return "editProduct";
+        }
 
         MultipartFile image = product.getImage();
         String rootDirectory = request.getSession().getServletContext().getRealPath("/");

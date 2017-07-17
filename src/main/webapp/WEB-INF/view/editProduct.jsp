@@ -32,7 +32,7 @@
             </div>
 
             <div class="form-group">
-                <label for="description">Description</label>
+                <label for="description">Description</label><form:errors path="description" cssStyle="color: darkred;"/>
                 <form:textarea path="description" id="description" class="form-control" value="${product.description}"/>
             </div>
 

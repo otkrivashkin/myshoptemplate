@@ -30,12 +30,12 @@
             </div>
 
             <div class="form-group">
-                <label for="description">Description</label><form:errors path="name" cssStyle="color: darkred;"/>
+                <label for="description">Description</label><form:errors path="description" cssStyle="color: darkred;"/>
                 <form:textarea path="description" id="description" class="form-control"/>
             </div>
 
             <div class="form-group">
-                <label for="price">Price</label><form:errors path="name" cssStyle="color: darkred;"/>
+                <label for="price">Price</label><form:errors path="price" cssStyle="color: darkred;"/>
                 <form:input path="price" id="price" class="form-control"/>
             </div>
 
@@ -52,7 +52,7 @@
             </div>
 
             <div class="form-group">
-                <label for="unitInStock">Unit In Stock</label><form:errors path="name" cssStyle="color: darkred;"/>
+                <label for="unitInStock">Unit In Stock</label><form:errors path="unitInStock" cssStyle="color: darkred;"/>
                 <form:input path="unitInStock" id="unitInStock" class="form-control"/>
             </div>
 
