@@ -1,5 +1,8 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@include file="/WEB-INF/view/template/header.jsp"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@include file="template/head.jsp"%>
+<%@include file="template/nav.jsp"%>
+
 
 <div class="container-wrapper">
     <div class="container">
@@ -70,10 +73,9 @@
             <a href="<c:url value="/admin/productInventory"/>" class="btn btn-danger">Cancel</a>
         </form:form><!-- END PRODUCT FORM -->
 
-        <!-- FOOTER -->
-        <%@include file="/WEB-INF/view/template/footer.jsp"%>
+
     </div>
 </div>
 <!-- /.container -->
-
-<%@include file="/WEB-INF/view/template/libraries.jsp"%>
+<!-- FOOTER -->
+<%@include file="template/footer.jsp"%>

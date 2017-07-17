@@ -3,8 +3,10 @@
 <%@include file="template/head.jsp" %>
 <%@include file="template/nav.jsp"%>
 
-<h3>
-    <a href="<c:url value="/admin/productInventory"/>">Product Inventory</a>
-</h3>
+<div class="container">
+    <h3>
+        <a href="<c:url value="/admin/productInventory"/>">Product Inventory</a>
+    </h3>
+</div>
 
 <%@include file="template/footer.jsp"%>
