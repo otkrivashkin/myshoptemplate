@@ -28,7 +28,7 @@
             </thead>
             <c:forEach items="${products}" var="product">
                 <tr>
-                    <td><img src="#" alt="image" /></td>
+                    <td><img src="<c:url value="/resources/images/${product.id}.png"/>" alt="image" style="width: 100%"/></td>
                     <td>${product.name}</td>
                     <td>${product.category}</td>
                     <td>${product.condition}</td>
@@ -49,11 +49,10 @@
 
         <a class="btn btn-primary" href="<spring:url value="/admin/productInventory/addProduct"/>">Add Product</a>
 
-        <!-- FOOTER -->
-        <%@include file="/WEB-INF/view/template/footer.jsp"%>
+
     </div>
 </div>
 <!-- /.container -->
 
-
+<!-- FOOTER -->
 <%@include file="template/footer.jsp"%>

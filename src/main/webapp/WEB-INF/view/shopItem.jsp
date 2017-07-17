@@ -1,4 +1,4 @@
-<%@include file="template/head.jsp"%>
+ <%@include file="template/head.jsp"%>
 <body>
 
 <!-- Navigation -->
