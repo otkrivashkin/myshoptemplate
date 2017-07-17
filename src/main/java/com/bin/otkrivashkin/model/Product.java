@@ -1,8 +1,10 @@
 package com.bin.otkrivashkin.model;
 
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 
 /**
  * Created by Note1 on 14.07.2017.
@@ -13,12 +15,18 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
+    @NotEmpty(message = "The product name must not be empty.")
     private String name;
     private String category;
+    @NotEmpty(message = "The product description must not be empty.")
     private String description;
+
+    @Min(value = 0, message = "The product unit must not be less than zero.")
     private double price;
     private String condition;
     private String status;
+    @Min(value = 0, message = "The product unit must not be less than zero.")
     private int unitInStock;
     private String manufacturer;
     @Transient

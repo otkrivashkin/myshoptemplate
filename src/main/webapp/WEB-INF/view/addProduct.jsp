@@ -18,7 +18,7 @@
                    enctype="multipart/form-data">
 
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name">Name</label><form:errors path="name" cssStyle="color: darkred;"/>
                 <form:input path="name" id="name" class="form-control"/>
             </div>
 
@@ -30,12 +30,12 @@
             </div>
 
             <div class="form-group">
-                <label for="description">Description</label>
+                <label for="description">Description</label><form:errors path="name" cssStyle="color: darkred;"/>
                 <form:textarea path="description" id="description" class="form-control"/>
             </div>
 
             <div class="form-group">
-                <label for="price">Price</label>
+                <label for="price">Price</label><form:errors path="name" cssStyle="color: darkred;"/>
                 <form:input path="price" id="price" class="form-control"/>
             </div>
 
@@ -52,7 +52,7 @@
             </div>
 
             <div class="form-group">
-                <label for="unitInStock">Unit In Stock</label>
+                <label for="unitInStock">Unit In Stock</label><form:errors path="name" cssStyle="color: darkred;"/>
                 <form:input path="unitInStock" id="unitInStock" class="form-control"/>
             </div>
 

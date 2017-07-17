@@ -5,13 +5,13 @@ import com.bin.otkrivashkin.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
-
-import javax.jws.WebParam;
+import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
@@ -72,7 +72,13 @@ public class HomeController {
 
 
     @RequestMapping(value = "/admin/productInventory/addProduct", method = RequestMethod.POST)
-    public String addProduct(@ModelAttribute("product") Product product, HttpServletRequest request) {
+    public String addProduct(@Valid @ModelAttribute("product") Product product, BindingResult result, HttpServletRequest request) {
+
+        if (result.hasErrors()) {
+            return "addProduct";
+        }
+
+
         productDao.addProduct(product);
 
         MultipartFile image = product.getImage();
