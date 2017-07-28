@@ -21,7 +21,7 @@
         <div class="col-md-9">
 
             <div class="thumbnail">
-                <img class="img-responsive" src="<c:url value="/resources/images/${product.id}.png"/>" style="width: 300px" alt="image">
+                <img class="img-responsive" src="<c:url value="/resources/images/${product.id}.png"/>" alt="image">
                 <div class="caption-full">
                     <h4 class="pull-right">${product.price} $</h4>
                     <h4><a href="#">${product.name}</a>
