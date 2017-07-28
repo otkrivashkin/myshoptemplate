@@ -25,7 +25,8 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="<c:url value="/resources/images/${product.id}.png"/> " alt="" style="width: 320px;height: 150px;">
+                            <img src="<c:url value="/resources/images/${product.id}.png"/> " alt=""
+                                 style="width: 320px;height: 150px;">
                             <div class="caption">
                                 <h4 class="pull-right">${product.price}</h4>
                                 <h4><a href="<c:url value="/shopList/viewProduct/${product.id}"/> ">${product.name}</a>
