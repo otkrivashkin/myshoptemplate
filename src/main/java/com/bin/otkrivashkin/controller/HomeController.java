@@ -20,9 +20,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
-/**
- * Created by Note1 on 14.07.2017.
- */
 @Controller
 public class HomeController {
 
@@ -82,10 +79,8 @@ public class HomeController {
         productDao.addProduct(product);
 
         MultipartFile image = product.getImage();
-        String dir = System.getProperty("catalina.home");
         String rootDirectory = request.getSession().getServletContext().getRealPath("/");
         path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\" + product.getId() + ".png");
-        System.out.println("Pasdasath of this shit ->>>>" + dir);
         if (image != null && !image.isEmpty()) {
             try {
                 image.transferTo(new File(path.toString()));
@@ -102,7 +97,6 @@ public class HomeController {
     public String deleteProduct(@PathVariable long id, Model model, HttpServletRequest request) {
         String rootDirectory = request.getSession().getServletContext().getRealPath("/");
         path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\" + id + ".png");
-
         if (Files.exists(path)) {
             try {
                 Files.delete(path);
