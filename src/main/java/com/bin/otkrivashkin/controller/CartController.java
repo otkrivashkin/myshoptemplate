@@ -1,6 +1,7 @@
 package com.bin.otkrivashkin.controller;
 
 
+import com.bin.otkrivashkin.dao.CartDao;
 import com.bin.otkrivashkin.dao.ProductDao;
 import com.bin.otkrivashkin.model.Cart;
 import com.bin.otkrivashkin.model.Product;
@@ -13,6 +14,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/rest/cart")
 public class CartController {
+
+    @Autowired
+    private CartDao cartDao;
 
     @Autowired
     private ProductDao productDao;
