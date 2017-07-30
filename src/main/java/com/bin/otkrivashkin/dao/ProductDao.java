@@ -11,11 +11,11 @@ public interface ProductDao {
 
     void addProduct(Product product);
 
-    Product getProductById(long id);
+    Product getProductById(String id);
 
     List<Product> getAllProducts();
 
-    void deleteProduct(long id);
+    void deleteProduct(String id);
 
     void editProduct(Product product);
 }

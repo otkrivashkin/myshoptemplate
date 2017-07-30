@@ -14,7 +14,7 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private String id;
 
     @NotEmpty(message = "The product name must not be empty.")
     private String name;
@@ -32,11 +32,11 @@ public class Product {
     @Transient
     private MultipartFile image;
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
